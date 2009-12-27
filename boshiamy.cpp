@@ -2,7 +2,7 @@
 QString int2str(int code)
 {
 	QString temp;
-        switch(code){
+	switch(code){
 	case 0:
 		temp = "0"; break;
 	case 1:
@@ -108,12 +108,12 @@ Boshiamy::Boshiamy()
     #endif
 	}
 #endif
-        setStatus(B_Complete); ///< 預設是全模式 ;
+	setStatus(B_Complete); ///< 預設是全模式 ;
 }
 
 void Boshiamy::setStatus(Status mode)
 {
-        status = mode;
+	status = mode;
 }
 
 bool Boshiamy::compare(QString test, QString list)
@@ -138,7 +138,7 @@ bool Boshiamy::compare(QString test, QString list)
 		check = Complete;
 	}
 #endif
-        if(check.value(test).contains(list.toUpper()))
+	if(check.value(test).contains(list.toUpper()))
 		return true;
 	else
 		return false;
@@ -147,14 +147,14 @@ bool Boshiamy::compare(QString test, QString list)
 
 QString Boshiamy::getCode(QString word)
 {
-        QString tmp;
+	QString tmp;
 #ifndef SQL_SUPPORT
-        tmp  = Standard.value(word).first();
+	tmp  = Standard.value(word).first();
 #endif
 #ifdef SQL_SUPPORT
-        tmp = Complete.value(word).first();
+	tmp = Complete.value(word).first();
 #endif
-        return tmp;
+	return tmp;
 }
 
 #ifndef SQL_SUPPORT
@@ -166,17 +166,17 @@ bool Boshiamy::readfile(QString filename)
 	{
 		QTextStream in(&file);
 		in.readLine((qint64)80); ///< 略掉第一行;
-                while(!in.atEnd())
-                {
+		while(!in.atEnd())
+		{
 			QString line =in.readLine((qint64)64); ///< 讀入的每一行;
-                        QString key = line.section("",0,5).simplified(), ///< 字根;
+			QString key = line.section("",0,5).simplified(), ///< 字根;
 				word = line.section('~',1,1); ///< 漢字;
-                        /*
-                        bool standard = (line.section('~',3,3).compare("v",Qt::CaseInsensitive)) ? false : true ;
-                        bool simplify = (line.section('~',4,4).compare("v",Qt::CaseInsensitive)) ? false : true ;
-                        */
-                        bool standard = !(line.section('~',3,3).compare("v"));
-                        bool simplify = !(line.section('~',4,4).compare("v"));
+			/*
+			   bool standard = (line.section('~',3,3).compare("v",Qt::CaseInsensitive)) ? false : true ;
+			   bool simplify = (line.section('~',4,4).compare("v",Qt::CaseInsensitive)) ? false : true ;
+			 */
+			bool standard = !(line.section('~',3,3).compare("v"));
+			bool simplify = !(line.section('~',4,4).compare("v"));
 
 			if(Complete.contains(word)) ///< 若這個字碼有出現過了，則用插入的方式;
 			{
@@ -215,9 +215,9 @@ bool Boshiamy::readfile(QString filename)
 		qDebug("file opening error");
 		///<  do something...;
 #endif
-                return false;
+		return false;
 	}
-        return true;
+	return true;
 }
 
 #endif
@@ -269,21 +269,21 @@ bool Boshiamy::readfile(QString filename)
 						break;
 					}
 					text = query.value(6).toString();
-                                        if(! code.isEmpty())
-                                        {
-                                                QStringList tmp;
-                                                if(Complete.contains(text))
-                                                {
-                                                        tmp = Complete.value(text);
-                                                        tmp.append(code);
-                                                        Complete.insert(text,tmp);
-                                                }
-                                                else
-                                                {
-                                                        tmp.append(code);
-                                                        Complete.insert(text,tmp);
-                                                }
-                                        }
+					if(!code.isEmpty())
+					{
+						QStringList tmp;
+						if(Complete.contains(text))
+						{
+							tmp = Complete.value(text);
+							tmp.append(code);
+							Complete.insert(text,tmp);
+						}
+						else
+						{
+							tmp.append(code);
+							Complete.insert(text,tmp);
+						}
+					}
 				}
 			}
 			else
@@ -292,7 +292,7 @@ bool Boshiamy::readfile(QString filename)
 				qDebug("SQL query error");
 				qDebug()<<query.lastError();
 #endif
-                                return false;
+				return false;
 			}
 		}
 		else
@@ -301,7 +301,7 @@ bool Boshiamy::readfile(QString filename)
 			qDebug("ERROR: Sql Opening fault...");
 			qDebug()<< db.lastError();
 #endif
-                        return false;
+			return false;
 		}
 	}
 	else
@@ -310,40 +310,40 @@ bool Boshiamy::readfile(QString filename)
 		qDebug("file opening error");
 		///< do something...;
 #endif
-                return false;
+		return false;
 	}
-        swapList();
-        return true;
+	swapList();
+	return true;
 }
 
 void Boshiamy::swapList()
 {
-        foreach(QString str,Complete.keys())
-        {
-                QStringList items = Complete.value(str);
-                QMap<int,QStringList> map;
-                foreach(QString item ,items)
-                {
-                        QStringList tmp;
-                        if(map.contains(item.length()))
-                        {
-                                tmp = map.value(item.length());
-                                tmp.append(item);
-                                map.insert(item.length(),tmp);
-                        }
-                        else
-                        {
-                                tmp.append(item);
-                                map.insert(item.length(),tmp);
-                        }
-                }
-                QStringList tmp;
-                for(int i = 1 ; i < 6 ; i++)
-                {
-                        if(map.contains(i))
-                                tmp.append(map.value(i));
-                }
-                Complete.insert(str,tmp);
-        }
+	foreach(QString str,Complete.keys())
+	{
+		QStringList items = Complete.value(str);
+		QMap<int,QStringList> map;
+		foreach(QString item,items)
+		{
+			QStringList tmp;
+			if(map.contains(item.length()))
+			{
+				tmp = map.value(item.length());
+				tmp.append(item);
+				map.insert(item.length(),tmp);
+			}
+			else
+			{
+				tmp.append(item);
+				map.insert(item.length(),tmp);
+			}
+		}
+		QStringList tmp;
+		for(int i = 1 ; i < 6 ; i++)
+		{
+			if(map.contains(i))
+				tmp.append(map.value(i));
+		}
+		Complete.insert(str,tmp);
+	}
 }
 #endif

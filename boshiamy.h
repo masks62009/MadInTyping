@@ -1,8 +1,6 @@
 #ifndef BOSHIAMY_H
 #define BOSHIAMY_H
-/**
-  *     #define SQL_SUPPORT
-  */
+
 #ifdef SQL_SUPPORT
     #include <QtSql>
     #include <QDir>
@@ -15,7 +13,9 @@
 #import <QtCore>
 
 #ifndef SQL_SUPPORT
+
 #include <QTextStream>
+
 #endif
 
 #import "const.h"
@@ -25,27 +25,27 @@ QString int2str(int code);
 class Boshiamy
 {
 public:
-    Boshiamy();
-public:
+        Boshiamy();
 
-    bool readfile(const QString filename);
-    bool compare(const QString test , const QString list);
-    void setStatus(Status mode);
-    QString getCode(QString word);
+        bool readfile(const QString filename);
+        bool compare(const QString test, const QString list);
+        void setStatus(Status mode);
+        QString getCode(QString word);
+
 protected:
 
 #ifndef SQL_SUPPORT
-    QMap<QString,QStringList> Standard;
-    QMap<QString,QStringList> Simplified;
+        QMap<QString,QStringList> Standard;
+        QMap<QString,QStringList> Simplified;
 #endif
-    QMap<QString,QStringList> Complete;
+        QMap<QString,QStringList> Complete;
 
 #ifdef SQL_SUPPORT
-    void swapList();
+        void swapList();
 #endif
 
 #ifndef SQL_SUPPORT
-    Status status;
+        Status status;
 #endif
 
 };
