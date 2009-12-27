@@ -67,7 +67,6 @@ void MainWindow::drawLayout()
 	for (int i = 0 ; i < Col ; i++)
 	{
 		Grid->setColumnMinimumWidth(i,40);
-		//Grid->setColumnStretch(i,1);
 		Grid->setMargin(5);
 	}
 	int row = 0,
@@ -77,7 +76,6 @@ void MainWindow::drawLayout()
 		QLabel * label = new QLabel();
 		label->setText(str);
 		label->setFont(font);
-		//label->setGeometry(0,0,45,30);
 		if(col < Col)
 		{
 			col++;
@@ -89,7 +87,6 @@ void MainWindow::drawLayout()
 			{
 				QLabel * textLabel = new QLabel();
 				textLabel->setFont(smallfont);
-				//textLabel->setGeometry(0,0,45,30);
 				Grid->addWidget(textLabel,row,i,Qt::AlignLeft);
 				LabelList.append(textLabel);
 			}
@@ -104,7 +101,6 @@ void MainWindow::drawLayout()
 		Grid->addWidget(textLabel,(row+1),i,Qt::AlignLeft);
 		LabelList.append(textLabel);
 	}
-	//ui->scrollAreaWidgetContents->setLayout(Grid);
 	Scroll->setWidget(widget);
 	widget->setLayout(Grid);
 }

@@ -171,10 +171,10 @@ bool Boshiamy::readfile(QString filename)
 			QString line =in.readLine((qint64)64); ///< 讀入的每一行;
 			QString key = line.section("",0,5).simplified(), ///< 字根;
 				word = line.section('~',1,1); ///< 漢字;
-			/*
-			   bool standard = (line.section('~',3,3).compare("v",Qt::CaseInsensitive)) ? false : true ;
-			   bool simplify = (line.section('~',4,4).compare("v",Qt::CaseInsensitive)) ? false : true ;
-			 */
+                        /**
+                          *  bool standard = (line.section('~',3,3).compare("v",Qt::CaseInsensitive)) ? false : true ;
+                          *  bool simplify = (line.section('~',4,4).compare("v",Qt::CaseInsensitive)) ? false : true ;
+                          **/
 			bool standard = !(line.section('~',3,3).compare("v"));
 			bool simplify = !(line.section('~',4,4).compare("v"));
 
