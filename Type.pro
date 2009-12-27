@@ -3,6 +3,9 @@
 # -------------------------------------------------
 TARGET = Type
 TEMPLATE = app
+CONFIG += static \
+          x86 \
+          ppc
 SOURCES += main.cpp \
     mainwindow.cpp \
     boshiamy.cpp
