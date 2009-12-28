@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MadInTyping: /Users/mask/MadInTyping/MadInTyping/mainwindow.cpp 原始程式檔</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 產生者: Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="../../main.html"><span>主頁面</span></a></li>
+      <li><a href="../../annotated.html"><span>類別</span></a></li>
+      <li class="current"><a href="../../files.html"><span>檔案</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="../../files.html"><span>檔案列表</span></a></li>
+    </ul>
+  </div>
+<h1>/Users/mask/MadInTyping/MadInTyping/mainwindow.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;mainwindow.h&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;ui_mainwindow.h&quot;</span>
+<a name="l00003"></a>00003 
+<a name="l00004"></a><a class="code" href="../../d9/dc6/class_main_window_a8b244be8b7b7db1b08de2a2acb9409db.html#a8b244be8b7b7db1b08de2a2acb9409db">00004</a> <a class="code" href="../../d9/dc6/class_main_window_a8b244be8b7b7db1b08de2a2acb9409db.html#a8b244be8b7b7db1b08de2a2acb9409db" title="建立主視窗跟相關的一些元件">MainWindow::MainWindow</a>(QWidget *parent) :
+<a name="l00005"></a>00005     QMainWindow(parent),
+<a name="l00006"></a>00006     ui(new Ui::<a class="code" href="../../d9/dc6/class_main_window.html" title="主視窗的宣告">MainWindow</a>)
+<a name="l00007"></a>00007 {
+<a name="l00008"></a>00008     ui-&gt;setupUi(<span class="keyword">this</span>);
+<a name="l00009"></a>00009 }
+<a name="l00010"></a>00010 
+<a name="l00011"></a><a class="code" href="../../d9/dc6/class_main_window_ae98d00a93bc118200eeef9f9bba1dba7.html#ae98d00a93bc118200eeef9f9bba1dba7">00011</a> <a class="code" href="../../d9/dc6/class_main_window_ae98d00a93bc118200eeef9f9bba1dba7.html#ae98d00a93bc118200eeef9f9bba1dba7" title="解構子">MainWindow::~MainWindow</a>()
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013     <span class="keyword">delete</span> ui;
+<a name="l00014"></a>00014 }
+<a name="l00015"></a>00015 
+<a name="l00016"></a><a class="code" href="../../d9/dc6/class_main_window_af4ca5d0d3d18ddcb7d54b6596bbf4797.html#af4ca5d0d3d18ddcb7d54b6596bbf4797">00016</a> <span class="keywordtype">void</span> <a class="code" href="../../d9/dc6/class_main_window_af4ca5d0d3d18ddcb7d54b6596bbf4797.html#af4ca5d0d3d18ddcb7d54b6596bbf4797" title="當軟體的地區屬性改變，呼叫 Qt Designer的翻譯出來">MainWindow::changeEvent</a>(QEvent *e)
+<a name="l00017"></a>00017 {
+<a name="l00018"></a>00018     <a class="code" href="../../d9/dc6/class_main_window_af4ca5d0d3d18ddcb7d54b6596bbf4797.html#af4ca5d0d3d18ddcb7d54b6596bbf4797" title="當軟體的地區屬性改變，呼叫 Qt Designer的翻譯出來">QMainWindow::changeEvent</a>(e);
+<a name="l00019"></a>00019     <span class="keywordflow">switch</span> (e-&gt;type()) {
+<a name="l00020"></a>00020     <span class="keywordflow">case</span> QEvent::LanguageChange:
+<a name="l00021"></a>00021         ui-&gt;retranslateUi(<span class="keyword">this</span>);
+<a name="l00022"></a>00022         <span class="keywordflow">break</span>;
+<a name="l00023"></a>00023     <span class="keywordflow">default</span>:
+<a name="l00024"></a>00024         <span class="keywordflow">break</span>;
+<a name="l00025"></a>00025     }
+<a name="l00026"></a>00026 }
+</pre></div></div>
+<hr size="1"/><address style="text-align: right;"><small>產生日期:Mon Dec 28 21:21:09 2009, 專案:MadInTyping, 產生器:&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

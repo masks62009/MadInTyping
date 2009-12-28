@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MadInTyping: Boshiamy::readfile</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 產生者: Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="../../main.html"><span>主頁面</span></a></li>
+      <li><a href="../../annotated.html"><span>類別</span></a></li>
+      <li><a href="../../files.html"><span>檔案</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+  <div class="navpath"><a class="el" href="../../dc/da3/class_boshiamy.html">Boshiamy</a>
+  </div>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a585dbd4e684cfb58119c7e0568865aa9.html#a585dbd4e684cfb58119c7e0568865aa9">Boshiamy</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a9c6f67e7f9594c5470f568c2413789f7.html#a9c6f67e7f9594c5470f568c2413789f7">compare</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a8965f02b3bc4dff81f3d3f5087eabd09.html#a8965f02b3bc4dff81f3d3f5087eabd09">Complete</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_ac08cf2e448720cd526ffe0b3c7504f8b.html#ac08cf2e448720cd526ffe0b3c7504f8b">getCode</a></td></tr>
+          <tr><td class="navtab"><a class="qindexHL" href="../../dc/da3/class_boshiamy_ab0e5988f5e3bd45221831965380be8e7.html#ab0e5988f5e3bd45221831965380be8e7">readfile</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a4692ed9a878e40f81c1a3202285e0b01.html#a4692ed9a878e40f81c1a3202285e0b01">setStatus</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a7eb68b5fa8f877be4b2240b8a608b45f.html#a7eb68b5fa8f877be4b2240b8a608b45f">Simplified</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a69ce38ccc64568e13e457888480e34dc.html#a69ce38ccc64568e13e457888480e34dc">Standard</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a5397622250f5e815949d448b16c1896a.html#a5397622250f5e815949d448b16c1896a">status</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top">
+<a class="anchor" id="ab0e5988f5e3bd45221831965380be8e7"></a><!-- doxytag: member="Boshiamy::readfile" ref="ab0e5988f5e3bd45221831965380be8e7" args="(const QString filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Boshiamy::readfile </td>
+          <td>(</td>
+          <td class="paramtype">const QString&nbsp;</td>
+          <td class="paramname"> <em>filename</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>讀取純文字格式的表格檔 </p>
+<p>bool <a class="el" href="../../dc/da3/class_boshiamy_ab0e5988f5e3bd45221831965380be8e7.html#ab0e5988f5e3bd45221831965380be8e7" title="讀取純文字格式的表格檔">readfile()</a>是一個用 ifdef重載的函式，這個是讀取純文字檔的版本 由於純文字的表格比較多資訊，所以它有比較多的資料要處理；包括建議碼、 簡碼與全碼模式。因為這個檔案是 Qt 的資源模式載入的，所以其實沒有什麼 錯誤會需要處理的。大致上就是簡單的讀進來、排好，乖乖的用就好了。</p>
+<dl><dt><b>參數:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>QString</em>&nbsp;</td><td>filename 要讀入的檔案名稱，不寫死的原因是… 嗯…就是不想寫死 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>傳回值:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>true</em>&nbsp;</td><td>讀取正常 ///&lt; 理論上都應該是這個啦！ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>false</em>&nbsp;</td><td>讀取失敗 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><p>&lt; 略掉第一行;</p>
+<p>&lt; 讀入的每一行;</p>
+<p>&lt; 字根;</p>
+<p>&lt; 漢字;</p>
+<p>bool standard = (line.section('~',3,3).compare("v",Qt::CaseInsensitive)) ? false : true ; bool simplify = (line.section('~',4,4).compare("v",Qt::CaseInsensitive)) ? false : true ; QString::compare()的用法很特別，它是如果傳入的字根比較多字，傳回正值，兩者相同傳回零，傳入字根較少字 則傳回負值。 所以這邊只要用 !(QString::compare())就可以了…</p>
+<p>&lt; 若這個字碼有出現過了，則用插入的方式;</p>
+<p>&lt; 若這個字碼沒有出現過，則用新增的方式; </p>
+</p>
+
+<p>定義在 <a class="el" href="../../dc/dc9/boshiamy_8cpp_source.html">boshiamy.cpp</a> 檔案之第 <a class="el" href="../../dc/dc9/boshiamy_8cpp_source.html#l00241">241</a> 行.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00242"></a>00242 {
+<a name="l00243"></a>00243         QFile file(filename);
+<a name="l00244"></a>00244         <span class="keywordflow">if</span>(file.open(QIODevice::ReadOnly))
+<a name="l00245"></a>00245         {
+<a name="l00246"></a>00246                 QTextStream in(&amp;file);
+<a name="l00247"></a>00247                 in.readLine((qint64)80);                                
+<a name="l00248"></a>00248                 <span class="keywordflow">while</span>(!in.atEnd())
+<a name="l00249"></a>00249                 {
+<a name="l00250"></a>00250                         QString line =in.readLine((qint64)64);          
+<a name="l00251"></a>00251                         QString key = line.section(<span class="stringliteral">&quot;&quot;</span>,0,5).simplified(), 
+<a name="l00252"></a>00252                                 word = line.section(<span class="charliteral">&apos;~&apos;</span>,1,1);           
+<a name="l00253"></a>00253 
+<a name="l00259"></a>00259                         <span class="keywordtype">bool</span> standard = !(line.section(<span class="charliteral">&apos;~&apos;</span>,3,3).compare(<span class="stringliteral">&quot;v&quot;</span>));
+<a name="l00260"></a>00260                         <span class="keywordtype">bool</span> simplify = !(line.section(<span class="charliteral">&apos;~&apos;</span>,4,4).compare(<span class="stringliteral">&quot;v&quot;</span>));
+<a name="l00261"></a>00261 
+<a name="l00262"></a>00262                         <span class="keywordflow">if</span>(<a class="code" href="../../dc/da3/class_boshiamy_a8965f02b3bc4dff81f3d3f5087eabd09.html#a8965f02b3bc4dff81f3d3f5087eabd09" title="全碼表格，在 iBus底下限制只能使用這個表">Complete</a>.contains(word))                     
+<a name="l00263"></a>00263                         {
+<a name="l00264"></a>00264                                 QStringList tmp;
+<a name="l00265"></a>00265                                 tmp = <a class="code" href="../../dc/da3/class_boshiamy_a8965f02b3bc4dff81f3d3f5087eabd09.html#a8965f02b3bc4dff81f3d3f5087eabd09" title="全碼表格，在 iBus底下限制只能使用這個表">Complete</a>.value(word);
+<a name="l00266"></a>00266                                 tmp.append(key);
+<a name="l00267"></a>00267                                 <a class="code" href="../../dc/da3/class_boshiamy_a8965f02b3bc4dff81f3d3f5087eabd09.html#a8965f02b3bc4dff81f3d3f5087eabd09" title="全碼表格，在 iBus底下限制只能使用這個表">Complete</a>.insert(word,tmp);
+<a name="l00268"></a>00268                                 <span class="keywordflow">if</span>(standard)
+<a name="l00269"></a>00269                                 {
+<a name="l00270"></a>00270                                         tmp = <a class="code" href="../../dc/da3/class_boshiamy_a69ce38ccc64568e13e457888480e34dc.html#a69ce38ccc64568e13e457888480e34dc" title="標準碼表格">Standard</a>.value(word);
+<a name="l00271"></a>00271                                         tmp.append(key);
+<a name="l00272"></a>00272                                         <a class="code" href="../../dc/da3/class_boshiamy_a69ce38ccc64568e13e457888480e34dc.html#a69ce38ccc64568e13e457888480e34dc" title="標準碼表格">Standard</a>.insert(word,tmp);
+<a name="l00273"></a>00273                                 }
+<a name="l00274"></a>00274                                 <span class="keywordflow">if</span>(simplify)
+<a name="l00275"></a>00275                                 {
+<a name="l00276"></a>00276                                         tmp = <a class="code" href="../../dc/da3/class_boshiamy_a7eb68b5fa8f877be4b2240b8a608b45f.html#a7eb68b5fa8f877be4b2240b8a608b45f" title="簡碼表格">Simplified</a>.value(word);
+<a name="l00277"></a>00277                                         tmp.append(key);
+<a name="l00278"></a>00278                                         <a class="code" href="../../dc/da3/class_boshiamy_a7eb68b5fa8f877be4b2240b8a608b45f.html#a7eb68b5fa8f877be4b2240b8a608b45f" title="簡碼表格">Simplified</a>.insert(word,tmp);
+<a name="l00279"></a>00279                                 }
+<a name="l00280"></a>00280                         }
+<a name="l00281"></a>00281                         <span class="keywordflow">else</span>                                            
+<a name="l00282"></a>00282                         {
+<a name="l00283"></a>00283                                 QStringList tmp;
+<a name="l00284"></a>00284                                 tmp.append(key);
+<a name="l00285"></a>00285                                 <a class="code" href="../../dc/da3/class_boshiamy_a8965f02b3bc4dff81f3d3f5087eabd09.html#a8965f02b3bc4dff81f3d3f5087eabd09" title="全碼表格，在 iBus底下限制只能使用這個表">Complete</a>.insert(word,tmp);
+<a name="l00286"></a>00286                                 <span class="keywordflow">if</span>(standard)
+<a name="l00287"></a>00287                                         <a class="code" href="../../dc/da3/class_boshiamy_a69ce38ccc64568e13e457888480e34dc.html#a69ce38ccc64568e13e457888480e34dc" title="標準碼表格">Standard</a>.insert(word,tmp);
+<a name="l00288"></a>00288                                 <span class="keywordflow">if</span>(simplify)
+<a name="l00289"></a>00289                                         <a class="code" href="../../dc/da3/class_boshiamy_a7eb68b5fa8f877be4b2240b8a608b45f.html#a7eb68b5fa8f877be4b2240b8a608b45f" title="簡碼表格">Simplified</a>.insert(word,tmp);
+<a name="l00290"></a>00290                         }
+<a name="l00291"></a>00291                 }
+<a name="l00292"></a>00292         }
+<a name="l00293"></a>00293         <span class="keywordflow">else</span>
+<a name="l00294"></a>00294         {
+<a name="l00295"></a>00295 <span class="preprocessor">        #ifdef DEBUG</span>
+<a name="l00296"></a>00296 <span class="preprocessor"></span>                qDebug(<span class="stringliteral">&quot;file opening error&quot;</span>);
+<a name="l00298"></a>00298 <span class="preprocessor">        #endif</span>
+<a name="l00299"></a>00299 <span class="preprocessor"></span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00300"></a>00300         }
+<a name="l00301"></a>00301         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00302"></a>00302 }
+</pre></div></p>
+
+<p><div class="dynheader">
+呼叫此函數的函數列表:</div>
+<div class="dynsection">
+</div>
+</p>
+
+</div>
+</div>
+    </td>
+  </tr>
+</table>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>產生日期:Mon Dec 28 21:21:09 2009, 專案:MadInTyping, 產生器:&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

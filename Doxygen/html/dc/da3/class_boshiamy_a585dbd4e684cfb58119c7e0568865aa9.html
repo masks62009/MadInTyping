@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MadInTyping: Boshiamy::Boshiamy</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 產生者: Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="../../main.html"><span>主頁面</span></a></li>
+      <li><a href="../../annotated.html"><span>類別</span></a></li>
+      <li><a href="../../files.html"><span>檔案</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+  <div class="navpath"><a class="el" href="../../dc/da3/class_boshiamy.html">Boshiamy</a>
+  </div>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindexHL" href="../../dc/da3/class_boshiamy_a585dbd4e684cfb58119c7e0568865aa9.html#a585dbd4e684cfb58119c7e0568865aa9">Boshiamy</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a9c6f67e7f9594c5470f568c2413789f7.html#a9c6f67e7f9594c5470f568c2413789f7">compare</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a8965f02b3bc4dff81f3d3f5087eabd09.html#a8965f02b3bc4dff81f3d3f5087eabd09">Complete</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_ac08cf2e448720cd526ffe0b3c7504f8b.html#ac08cf2e448720cd526ffe0b3c7504f8b">getCode</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_ab0e5988f5e3bd45221831965380be8e7.html#ab0e5988f5e3bd45221831965380be8e7">readfile</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a4692ed9a878e40f81c1a3202285e0b01.html#a4692ed9a878e40f81c1a3202285e0b01">setStatus</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a7eb68b5fa8f877be4b2240b8a608b45f.html#a7eb68b5fa8f877be4b2240b8a608b45f">Simplified</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a69ce38ccc64568e13e457888480e34dc.html#a69ce38ccc64568e13e457888480e34dc">Standard</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="../../dc/da3/class_boshiamy_a5397622250f5e815949d448b16c1896a.html#a5397622250f5e815949d448b16c1896a">status</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top">
+<a class="anchor" id="a585dbd4e684cfb58119c7e0568865aa9"></a><!-- doxytag: member="Boshiamy::Boshiamy" ref="a585dbd4e684cfb58119c7e0568865aa9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Boshiamy::Boshiamy </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><a class="el" href="../../dc/da3/class_boshiamy.html" title="Boshiamy class 控制字根讀取、比對與反查.">Boshiamy</a> 元件的建立. </p>
+<p>沒有輸出與輸入值，一切都是預設好的，在表格模式是採用編入的 liu-uni-trail.txt 來作為字根表來源，在 SQL_SUPPORT 模式則是用同一目錄下的 boshiamy_t.db 作為 輸入來源。同時設定預設的比對模式是全碼模式。 </p>
+
+<p><p>&lt; 採用內置的檔案</p>
+<p>&lt; 預設是全模式 ; </p>
+</p>
+
+<p>定義在 <a class="el" href="../../dc/dc9/boshiamy_8cpp_source.html">boshiamy.cpp</a> 檔案之第 <a class="el" href="../../dc/dc9/boshiamy_8cpp_source.html#l00109">109</a> 行.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00110"></a>00110 {
+<a name="l00111"></a>00111 <span class="preprocessor">#ifndef SQL_SUPPORT</span>
+<a name="l00112"></a>00112 <span class="preprocessor"></span>        <span class="keywordflow">if</span>(<a class="code" href="../../dc/da3/class_boshiamy_ab0e5988f5e3bd45221831965380be8e7.html#ab0e5988f5e3bd45221831965380be8e7" title="讀取純文字格式的表格檔">readfile</a>(<span class="stringliteral">&quot;:/liu&quot;</span>))                                           
+<a name="l00113"></a>00113         {
+<a name="l00114"></a>00114 <span class="preprocessor">    #ifdef DEBUG</span>
+<a name="l00115"></a>00115 <span class="preprocessor"></span>                qDebug(<span class="stringliteral">&quot;read table file correct&quot;</span>);
+<a name="l00116"></a>00116 <span class="preprocessor">    #endif</span>
+<a name="l00117"></a>00117 <span class="preprocessor"></span>        }
+<a name="l00118"></a>00118         <span class="keywordflow">else</span>
+<a name="l00119"></a>00119         {
+<a name="l00120"></a>00120 <span class="preprocessor">    #ifdef DEBUG</span>
+<a name="l00121"></a>00121 <span class="preprocessor"></span>                qDebug(<span class="stringliteral">&quot;read table file incorrect&quot;</span>);
+<a name="l00122"></a>00122 <span class="preprocessor">    #endif</span>
+<a name="l00123"></a>00123 <span class="preprocessor"></span>        }
+<a name="l00124"></a>00124 <span class="preprocessor">#endif</span>
+<a name="l00125"></a>00125 <span class="preprocessor"></span>
+<a name="l00126"></a>00126 <span class="preprocessor">#ifdef SQL_SUPPORT</span>
+<a name="l00127"></a>00127 <span class="preprocessor"></span>        QDir dir;
+<a name="l00128"></a>00128         QString path = dir.currentPath().append(QDir::separator());     
+<a name="l00129"></a>00129         path.append(iBusFileName);                                      
+<a name="l00130"></a>00130         <span class="keywordflow">if</span>(<a class="code" href="../../dc/da3/class_boshiamy_ab0e5988f5e3bd45221831965380be8e7.html#ab0e5988f5e3bd45221831965380be8e7" title="讀取純文字格式的表格檔">readfile</a>(path))
+<a name="l00131"></a>00131         {
+<a name="l00132"></a>00132 <span class="preprocessor">    #ifdef DEBUG</span>
+<a name="l00133"></a>00133 <span class="preprocessor"></span>                qDebug(<span class="stringliteral">&quot;read SQL file correct&quot;</span>);
+<a name="l00134"></a>00134 <span class="preprocessor">    #endif</span>
+<a name="l00135"></a>00135 <span class="preprocessor"></span>        }
+<a name="l00136"></a>00136         <span class="keywordflow">else</span>
+<a name="l00137"></a>00137         {
+<a name="l00139"></a>00139 <span class="preprocessor">    #ifdef DEBUG</span>
+<a name="l00140"></a>00140 <span class="preprocessor"></span>                qDebug(<span class="stringliteral">&quot;read SQL file incorrect&quot;</span>);
+<a name="l00141"></a>00141 <span class="preprocessor">    #endif</span>
+<a name="l00142"></a>00142 <span class="preprocessor"></span>        }
+<a name="l00143"></a>00143 <span class="preprocessor">#endif</span>
+<a name="l00144"></a>00144 <span class="preprocessor"></span>        <a class="code" href="../../dc/da3/class_boshiamy_a4692ed9a878e40f81c1a3202285e0b01.html#a4692ed9a878e40f81c1a3202285e0b01" title="變動輸入法表格模式">setStatus</a>(B_Complete);                                          
+<a name="l00145"></a>00145 }
+</pre></div></p>
+
+<p><div class="dynheader">
+這是此函數的引用函數圖:</div>
+<div class="dynsection">
+<div class="center"><img src="../../dc/da3/class_boshiamy_a585dbd4e684cfb58119c7e0568865aa9_a585dbd4e684cfb58119c7e0568865aa9_cgraph.png" border="0" usemap="#dc/da3/class_boshiamy_a585dbd4e684cfb58119c7e0568865aa9_a585dbd4e684cfb58119c7e0568865aa9_cgraph_map" alt=""></div>
+</div>
+</p>
+
+</div>
+</div>
+    </td>
+  </tr>
+</table>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>產生日期:Mon Dec 28 21:21:09 2009, 專案:MadInTyping, 產生器:&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

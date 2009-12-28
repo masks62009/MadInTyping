@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MadInTyping: /Users/mask/MadInTyping/mainwindow.h 原始程式檔</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 產生者: Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="../../main.html"><span>主頁面</span></a></li>
+      <li><a href="../../annotated.html"><span>類別</span></a></li>
+      <li class="current"><a href="../../files.html"><span>檔案</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="../../files.html"><span>檔案列表</span></a></li>
+    </ul>
+  </div>
+<h1>/Users/mask/MadInTyping/mainwindow.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00009"></a>00009 <span class="preprocessor">#ifndef MAINWINDOW_H</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#define MAINWINDOW_H</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;QMainWindow&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#import &lt;QtGui&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#import &lt;QtCore&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#import &quot;boshiamy.h&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#import &quot;const.h&quot;</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>Ui {
+<a name="l00019"></a>00019 <span class="keyword">class </span><a class="code" href="../../d9/dc6/class_main_window.html" title="主視窗的宣告">MainWindow</a>;
+<a name="l00020"></a>00020 }
+<a name="l00021"></a>00021 
+<a name="l00029"></a>00029 <span class="keyword">class </span><a class="code" href="../../d9/dc6/class_main_window.html" title="主視窗的宣告">MainWindow</a> : <span class="keyword">public</span> QMainWindow {
+<a name="l00030"></a>00030 Q_OBJECT
+<a name="l00031"></a>00031 <span class="keyword">public</span>:
+<a name="l00032"></a>00032         <a class="code" href="../../d9/dc6/class_main_window_a8b244be8b7b7db1b08de2a2acb9409db.html#a8b244be8b7b7db1b08de2a2acb9409db" title="建立主視窗跟相關的一些元件">MainWindow</a>(QWidget *parent = 0);
+<a name="l00033"></a>00033         <a class="code" href="../../d9/dc6/class_main_window_ae98d00a93bc118200eeef9f9bba1dba7.html#ae98d00a93bc118200eeef9f9bba1dba7" title="解構子">~MainWindow</a>();
+<a name="l00034"></a><a class="code" href="../../d9/dc6/class_main_window_a72b55013dabecf622d61727004749486.html#a72b55013dabecf622d61727004749486">00034</a>         <a class="code" href="../../dc/da3/class_boshiamy.html" title="Boshiamy class 控制字根讀取、比對與反查.">Boshiamy</a> * <a class="code" href="../../d9/dc6/class_main_window_a72b55013dabecf622d61727004749486.html#a72b55013dabecf622d61727004749486" title="以後也會一直用到的字根檢查元件">check</a>;                                               
+<a name="l00035"></a>00035         <span class="keywordtype">void</span> <a class="code" href="../../d9/dc6/class_main_window_a4a7d2107db41c2018dfeb824c3eb1de8.html#a4a7d2107db41c2018dfeb824c3eb1de8" title="畫出視窗外觀">drawLayout</a>();                                              
+<a name="l00036"></a>00036         <span class="keywordtype">void</span> <a class="code" href="../../d9/dc6/class_main_window_a4af52de78d8a840f121adfe9c6396a42.html#a4af52de78d8a840f121adfe9c6396a42" title="設定要用的文章範本">setText</a>(<span class="keyword">const</span> QString text);                               
+<a name="l00037"></a>00037         <span class="keywordtype">void</span> <a class="code" href="../../d9/dc6/class_main_window_a62c533bafd6ca31ef4d1f5adeaeff5a1.html#a62c533bafd6ca31ef4d1f5adeaeff5a1" title="打字結束後出現的畫面，同時一併結束計時">awakeEnd</a>();                                                
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">public</span> slots:
+<a name="l00040"></a>00040         <span class="keywordtype">void</span> <a class="code" href="../../d9/dc6/class_main_window_abb90d8cf7c197970c9fe616f6080514f.html#abb90d8cf7c197970c9fe616f6080514f" title="計時器與同步更新 statusbar的功能，未來要把更新 statusbar的功能獨立開來...">showTime</a>();                                                
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="keyword">protected</span>:
+<a name="l00043"></a>00043         <span class="keywordtype">void</span> <a class="code" href="../../d9/dc6/class_main_window_af4ca5d0d3d18ddcb7d54b6596bbf4797.html#af4ca5d0d3d18ddcb7d54b6596bbf4797" title="當軟體的地區屬性改變，呼叫 Qt Designer的翻譯出來">changeEvent</a>(QEvent *e);                                    
+<a name="l00044"></a>00044         <span class="keywordtype">void</span> <a class="code" href="../../d9/dc6/class_main_window_a6b8e934fca603cf7678eabb9a6dfc709.html#a6b8e934fca603cf7678eabb9a6dfc709" title="主要回應所有的鍵盤事件，計算按錯幾次， widget換行等等的事，其實應該精...">keyPressEvent</a>(QKeyEvent *);                                
+<a name="l00045"></a>00045         QStringList <a class="code" href="../../d9/dc6/class_main_window_a94b1bd28a73817a1ee6c42f510135b30.html#a94b1bd28a73817a1ee6c42f510135b30" title="把打字範本轉換成漢字的集合，就是把 QString 轉換成一個一個漢字的...">text2List</a>(<span class="keyword">const</span> QString text);                      
+<a name="l00046"></a>00046 
+<a name="l00049"></a><a class="code" href="../../d9/dc6/class_main_window_ad44fa9aa9d906bcc783c17007a1f53d5.html#ad44fa9aa9d906bcc783c17007a1f53d5">00049</a>         QGridLayout *<a class="code" href="../../d9/dc6/class_main_window_ad44fa9aa9d906bcc783c17007a1f53d5.html#ad44fa9aa9d906bcc783c17007a1f53d5" title="堆放 QLabel的框架">Grid</a>;                                              
+<a name="l00050"></a><a class="code" href="../../d9/dc6/class_main_window_a134c755b25feeaef08fd6d8d779324cd.html#a134c755b25feeaef08fd6d8d779324cd">00050</a>         QScrollArea *<a class="code" href="../../d9/dc6/class_main_window_a134c755b25feeaef08fd6d8d779324cd.html#a134c755b25feeaef08fd6d8d779324cd" title="提供捲動畫面的零件">Scroll</a>;                                            
+<a name="l00051"></a><a class="code" href="../../d9/dc6/class_main_window_a26b28c2d8768662be86c1c3ac57f9c73.html#a26b28c2d8768662be86c1c3ac57f9c73">00051</a>         QList&lt;QLabel *&gt; <a class="code" href="../../d9/dc6/class_main_window_a26b28c2d8768662be86c1c3ac57f9c73.html#a26b28c2d8768662be86c1c3ac57f9c73" title="QLabel 指標的集合 QList好像不容許包裝繼承自 QWidget的物件，但是能裝它的指�...">LabelList</a>;                                      
+<a name="l00052"></a><a class="code" href="../../d9/dc6/class_main_window_a25223c7e8105ae1cc5810349aabff2a8.html#a25223c7e8105ae1cc5810349aabff2a8">00052</a>         QStringList <a class="code" href="../../d9/dc6/class_main_window_a25223c7e8105ae1cc5810349aabff2a8.html#a25223c7e8105ae1cc5810349aabff2a8" title="打字範本的單字集合">Text</a>;                                               
+<a name="l00053"></a><a class="code" href="../../d9/dc6/class_main_window_a356578805ed1248a7f2807434cb0e5ee.html#a356578805ed1248a7f2807434cb0e5ee">00053</a>         QTimer *<a class="code" href="../../d9/dc6/class_main_window_a356578805ed1248a7f2807434cb0e5ee.html#a356578805ed1248a7f2807434cb0e5ee" title="提供計時器的定時呼叫">timer</a>;                                                  
+<a name="l00054"></a><a class="code" href="../../d9/dc6/class_main_window_a43f9316d8c30dd49710f4e17e452fb47.html#a43f9316d8c30dd49710f4e17e452fb47">00054</a>         QTime *<a class="code" href="../../d9/dc6/class_main_window_a43f9316d8c30dd49710f4e17e452fb47.html#a43f9316d8c30dd49710f4e17e452fb47" title="實際計算經過時間的計時器">time</a>;                                                    
+<a name="l00055"></a><a class="code" href="../../d9/dc6/class_main_window_a23b3e9a558a4d57f6eee23ffb573e09f.html#a23b3e9a558a4d57f6eee23ffb573e09f">00055</a>         <span class="keywordtype">int</span> <a class="code" href="../../d9/dc6/class_main_window_a23b3e9a558a4d57f6eee23ffb573e09f.html#a23b3e9a558a4d57f6eee23ffb573e09f" title="定義每行最多幾個字">Col</a>;                                                        
+<a name="l00056"></a><a class="code" href="../../d9/dc6/class_main_window_a1253e7ccb5351cedf77271c9c1b42f14.html#a1253e7ccb5351cedf77271c9c1b42f14">00056</a>         <span class="keywordtype">int</span> <a class="code" href="../../d9/dc6/class_main_window_a1253e7ccb5351cedf77271c9c1b42f14.html#a1253e7ccb5351cedf77271c9c1b42f14" title="計算目前打到那邊，用來取出 LabelList裡的指標">At</a>;                                                         
+<a name="l00057"></a><a class="code" href="../../d9/dc6/class_main_window_a8e8ecdebc5e096c02251fda9915acbaa.html#a8e8ecdebc5e096c02251fda9915acbaa">00057</a>         <span class="keywordtype">int</span> <a class="code" href="../../d9/dc6/class_main_window_a8e8ecdebc5e096c02251fda9915acbaa.html#a8e8ecdebc5e096c02251fda9915acbaa" title="正確幾個字">correct</a>;                                                    
+<a name="l00058"></a><a class="code" href="../../d9/dc6/class_main_window_a80dd2fad8b3789ea9701ea8cba62bf3d.html#a80dd2fad8b3789ea9701ea8cba62bf3d">00058</a>         <span class="keywordtype">int</span> <a class="code" href="../../d9/dc6/class_main_window_a80dd2fad8b3789ea9701ea8cba62bf3d.html#a80dd2fad8b3789ea9701ea8cba62bf3d" title="錯誤幾個字">incorrect</a>;                                                  
+<a name="l00059"></a><a class="code" href="../../d9/dc6/class_main_window_af5794968634968d8efd9d07087871087.html#af5794968634968d8efd9d07087871087">00059</a>         <span class="keywordtype">int</span> <a class="code" href="../../d9/dc6/class_main_window_af5794968634968d8efd9d07087871087.html#af5794968634968d8efd9d07087871087" title="修正後正確的字數">recorrect</a>;                                                  
+<a name="l00060"></a><a class="code" href="../../d9/dc6/class_main_window_a8ccfab857e44c88602e2b2856b138b50.html#a8ccfab857e44c88602e2b2856b138b50">00060</a>         QString <a class="code" href="../../d9/dc6/class_main_window_a8ccfab857e44c88602e2b2856b138b50.html#a8ccfab857e44c88602e2b2856b138b50" title="目前鍵盤的 Buffer 區">Buff</a>;                                                   
+<a name="l00061"></a><a class="code" href="../../d9/dc6/class_main_window_add56592b955bc441784172f5d224a9fa.html#add56592b955bc441784172f5d224a9fa">00061</a>         QLabel *<a class="code" href="../../d9/dc6/class_main_window_add56592b955bc441784172f5d224a9fa.html#add56592b955bc441784172f5d224a9fa" title="對映 status bar 的內容">status</a>;                                                 
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="keyword">private</span>:
+<a name="l00064"></a>00064         <a class="code" href="../../d4/d4a/class_ui_1_1_main_window.html">Ui::MainWindow</a> *ui;                                             
+<a name="l00065"></a>00065 };
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="preprocessor">#endif // MAINWINDOW_H</span>
+</pre></div></div>
+<hr size="1"/><address style="text-align: right;"><small>產生日期:Mon Dec 28 21:21:09 2009, 專案:MadInTyping, 產生器:&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>
